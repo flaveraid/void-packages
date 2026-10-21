@@ -1,0 +1,20 @@
+# Template file for 'btrfs-assistant'
+pkgname=btrfs-assistant
+version=3.0.0
+revision=1
+build_style=cmake
+hostmakedepends="qt6-base qt6-tools qt6-declarative"
+makedepends="libbtrfsutil-devel qt6-base-devel qt6-declarative-devel
+ qt6-tools-devel qt6-svg-devel"
+depends="bash btrfs-progs diffutils polkit util-linux
+ hicolor-icon-theme"
+short_desc="GUI management tool for Btrfs subvolumes and Snapper snapshots"
+maintainer="flaveraid <flaveraid@spooby.net>"
+license="GPL-3.0-or-later"
+homepage="https://gitlab.com/btrfs-assistant/btrfs-assistant"
+distfiles="https://gitlab.com/btrfs-assistant/btrfs-assistant/-/archive/${version}/btrfs-assistant-${version}.tar.gz"
+checksum=cb33a9a616fc0f4196b3311ce8ae1ed3f4b24994546713e0dfb958407c8a86ff
+
+post_install() {
+	vdoc README.md
+}
