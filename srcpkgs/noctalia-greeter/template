@@ -1,11 +1,11 @@
 # Template file for 'noctalia-greeter'
 pkgname=noctalia-greeter
-version=1.6.0
+version=1.7.0
 revision=1
 build_style=meson
 hostmakedepends="git pkg-config"
 makedepends="cairo-devel fontconfig-devel freetype-devel
- json-c++ libepoxy-devel libglvnd-devel librsvg-devel
+ json-c++ libepoxy-devel libglvnd-devel libjxl-devel librsvg-devel
  libwebp-devel libxkbcommon-devel libxml2-devel MesaLib-devel
  pango-devel stb wayland-devel wayland-protocols
  tomlplusplus-devel wlroots0.20-devel"
@@ -15,7 +15,7 @@ maintainer="Haris <plavpxl@proton.me>"
 license="MIT"
 homepage="https://github.com/noctalia-dev/noctalia-greeter"
 distfiles="${homepage}/archive/v${version}.tar.gz"
-checksum=f23ebf07cbe4508971c08b0b81d2b5bfc4ec1ec45605d8f8fb01b799743a70b6
+checksum=5b092784c0147bb6739efc2e8146d2d07e3572a59d7a370e93092f9f56d4fcc8
 
 post_install() {
 	vlicense LICENSE
